@@ -3,6 +3,10 @@
 ## Project Overview
 This project integrates a robotic arm with a deep learning model (PointNet) for object classification and basic manipulation. The main goal was to implement a system where the robotic arm picks up and moves an object based on its classification.
 
+
+![Image Alt Text](image2.png)
+
+
 ### Key Steps:
 - **PointCloud Classification**: The project uses PointNet to classify objects based on their 3D point cloud data. A depth camera is used to capture the point cloud, which is then fed into the PointNet model for classification.
   
