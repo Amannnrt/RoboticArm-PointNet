@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<robot name="robotiq_2f85_gripper">
+
+  <!-- Base Link -->
+  <link name="gbase_link">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_base_link.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Left Finger -->
+  <link name="outer_knuckle_left">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_knuckle.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_outer_knuckle.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="inner_knuckle_left">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_knuckle.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd\Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_knuckle.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="outer_finger_left">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_finger.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_finger.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="inner_finger_left">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_finger.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_finger.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="pad_left">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_pad.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Right Finger (Mirrored) -->
+  <link name="outer_knuckle_right">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_knuckle.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_outer_knuckle.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <link name="inner_knuckle_right">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_knuckle.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd\Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_knuckle.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="outer_finger_right">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_finger.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_outer_finger.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="inner_finger_right">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_inner_finger.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/collision/robotiq_arg2f_85_inner_finger.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="pad_right">
+    <visual>
+      <geometry>
+        <mesh filename="C:/Users/iammd/Desktop/pybullet/robotiq_2f_85_gripper_visualization/meshes/visual/robotiq_arg2f_85_pad.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- JOINTS -->
+
+  <!-- Left Finger Joints -->
+  <joint name="outer_knuckle_left_joint" type="revolute">
+    <parent link="gbase"/>
+    <child link="outer_knuckle_left"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="inner_knuckle_left_joint" type="revolute">
+    <parent link="outer_knuckle_left"/>
+    <child link="inner_knuckle_left"/>
+    <origin xyz="0 0 0.03" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="outer_finger_left_joint" type="revolute">
+    <parent link="outer_knuckle_left"/>
+    <child link="outer_finger_left"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="inner_finger_left_joint" type="revolute">
+    <parent link="inner_knuckle_left"/>
+    <child link="inner_finger_left"/>
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <!-- Right Finger Joints (Mirrored) -->
+  <joint name="outer_knuckle_right_joint" type="revolute">
+    <parent link="gbase_link"/>
+    <child link="outer_knuckle_right"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="inner_knuckle_right_joint" type="revolute">
+    <parent link="outer_knuckle_right"/>
+    <child link="inner_knuckle_right"/>
+    <origin xyz="0 0 0.03" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="outer_finger_right_joint" type="revolute">
+    <parent link="outer_knuckle_right"/>
+    <child link="outer_finger_right"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="inner_finger_right_joint" type="revolute">
+    <parent link="inner_knuckle_right"/>
+    <child link="inner_finger_right"/>
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="0" upper="1.0" effort="10" velocity="1.0"/>
+  </joint>
+
+</robot>
