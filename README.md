@@ -5,6 +5,8 @@ This project integrates a robotic arm with a deep learning model (PointNet) for 
 
 
 ![Image Alt Text](image2.png)
+![Image Alt Text](image3.png)
+
 
 
 ### Key Steps:
