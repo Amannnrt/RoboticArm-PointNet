@@ -1,3 +1,14 @@
+> ⚠️ **Notice:** This project has known limitations and issues that have been addressed in a newer version.  
+Please check out the upgraded project here for a more stable and feature-complete implementation:  
+👉 [Upgraded PointNet Robotic Pick-and-Place](https://github.com/Amannnrt/PointNet-RoboticManipulation)
+
+
+
+
+
+
+
+
 # Robotic Arm with PointCloud Classification and Manipulation
 
 ## Project Overview
